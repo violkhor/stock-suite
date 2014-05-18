@@ -1,10 +1,10 @@
 {
-  "name": "node-js-sample",
+  "name": "bitstarter",
   "version": "0.1.0",
-  "description": "A sample Node.js app using Express 4",
-  "main": "index.js",
+  "description": "Bitstarter project",
+  "main": "web.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node ./web.js"
   },
   "dependencies": {
     "express": "^4.0.0"
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-sample"
+    "url": "https://github.com/violkhor/bitstarter"
   },
   "keywords": [
     "node",
     "heroku",
     "express"
   ],
-  "author": "Mark Pundsack",
+  "author": "Siang Khor",
   "contributors": [
     "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com)"
   ],
