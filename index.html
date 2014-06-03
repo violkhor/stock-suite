@@ -1,88 +1,122 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>My First Bitstarter Project</title>
-<link type="text/css" rel="stylesheet"
-	href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-2.3.2.css">
-<style type="text/css">
-body {
-	padding-top: 20px;
-	padding-bottom: 40px;
-}
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="violkhor">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
-.container {
-	width: 960px;
-}
 
-p.lead {
-	padding-top: 15px;
-}
+<!-- Custom styles for this template -->
+<link href="blog.css" rel="stylesheet">
 
-.navigation,.pitch,.section1,.section2,.faq,.footer {
-	padding: 10px 0px 10px 0px;
-}
 
-.video,.thermometer,.order,.social {
-	border: 1px dotted;
-	text-align: center;
-}
+<title>I am a Learner.</title>
 
-.video {
-	/* Internal borders have 1px width, thus need to add 4 x 1px to 120px. */
-	height: 124px;
-	line-height: 124px;
-}
-
-.thermometer,.order,.social {
-	/* line-height to vertically center: http://phrogz.net/css/vertical-align/index.html */
-	height: 40px;
-	line-height: 40px;
-}
-
-div.row {
-	border: 1px solid;
-}
-</style>
 </head>
 <body>
-	<div class="container">
-		<div class="row navigation">
-			<div class="span2 logo">Logo</div>
-			<div class="span6 blank">Blank</div>
-			<div class="span4 about">About</div>
-		</div>
-		<div class="row heading">
-			<div class="span12">
-				<h1>Bitstarter Title</h1>
-			</div>
-		</div>
-		<div class="row subheading">
-			<div class="span12">
-				<p class="lead">This is my first bitstarter project. Eeager to learn! I am on the development branch.</p>
-			</div>
-		</div>
-		<div class="row pitch">
-			<div class="span6 video">Video</div>
-			<div class="span6">
-				<div class="thermometer">Thermometer</div>
-				<div class="order">Order</div>
-				<div class="social">Social</div>
-			</div>
-		</div>
-		<div class="row section1">
-			<div class="span12">Marketing Section 1</div>
-		</div>
-		<div class="row section2">
-			<div class="span12">Marketing Section 2</div>
-		</div>
-		<div class="row faq">
-			<div class="span12">FAQ</div>
-		</div>
-		<div class="row footer">
-			<div class="span12">Footer</div>
+
+	<div class="blog-masthead">
+		<div class="container">
+			<nav class="blog-nav">
+				<a class="blog-nav-item active" href="#">Home</a> <a
+					class="blog-nav-item" href="#">New features</a> <a
+					class="blog-nav-item" href="#">Press</a> <a class="blog-nav-item"
+					href="#">New hires</a> <a class="blog-nav-item" href="#">About</a>
+			</nav>
 		</div>
 	</div>
+
+	<div class="container">
+
+		<div class="blog-header">
+			<h1 class="blog-title">The Learner</h1>
+			<p class="lead blog-description">The life of a dreamer
+				unconstructing his web of thoughts.</p>
+		</div>
+
+		<div class="row">
+
+			<div class="col-sm-8 blog-main">
+
+				<div class="blog-post">
+					<h2 class="blog-post-title">My First Blog Post</h2>
+					<p class="blog-post-meta">
+						June 2nd, 2014 by <a href="#">violkhor</a>
+					</p>
+
+					<p>It will soon be the first anniversary of my graduation from
+						University of Toronto. The one thing that I appreciate coming out
+						of school is the ability to learn. Long has gone the era of
+						spoon-feeding where teachers feed the students the recipes of
+						success. A new era of information outburst is well-beyond its
+						infancy stage and those who can feed himself will experience
+						exponential growth.</p>
+					<hr>
+
+					<blockquote>
+						<p>The journey of a thousand miles begin with a single step. -
+							Lao Tzu</p>
+					</blockquote>
+					<p>I have taken the first step.</p>
+
+				</div>
+				<!-- /.blog-post -->
+
+
+
+				<ul class="pager">
+					<li><a href="#">Previous</a></li>
+					<li><a href="#">Next</a></li>
+				</ul>
+
+			</div>
+			<!-- /.blog-main -->
+
+			<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+				<div class="sidebar-module sidebar-module-inset">
+					<h4>About</h4>
+					<p>I am an avid learner and dreamer. Currently, I am interested
+						in web development, financial engineering and global macro.</p>
+				</div>
+
+				<div class="sidebar-module">
+					<h4>Elsewhere</h4>
+					<ol class="list-unstyled">
+						<li><a href="https://github.com/violkhor">GitHub</a></li>
+						<li><a href="https://twitter.com/siangchoonk">Twitter</a></li>
+						<li><a href="https://plus.google.com/+SiangChoonKhor">Google+</a></li>
+					</ol>
+				</div>
+			</div>
+			<!-- /.blog-sidebar -->
+
+		</div>
+		<!-- /.row -->
+
+	</div>
+	<!-- /.container -->
+
+	<div class="blog-footer">
+		<p>
+			Blog template built for <a href="http://getbootstrap.com">Bootstrap</a>
+			by <a href="https://twitter.com/mdo">@mdo</a>.
+		</p>
+		<p>
+			<a href="#">Back to top</a>
+		</p>
+	</div>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script
+		src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
 </body>
 </html>
+
