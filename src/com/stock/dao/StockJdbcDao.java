@@ -22,11 +22,11 @@ import com.stock.model.StockInfoRowMapper;
 public class StockJdbcDao implements StockDao {
 
 	String INSERT_COMPANY = "INSERT INTO company(companyName, companySymbol) VALUES(?,?)";
-	String INSERT_HISTORICAL = "INSERT INTO historicalRecord(symbol, tradeDate, openingPrice, closingPrice, dayHigh, dayLow, volume, adjustedClose) values(?,?,?,?,?,?,?,?)";
-	String INSERT_RECENT = "INSERT INTO recentStockInfo (ask, bid, dividendPerShare,dividendYield, earningsPerShare, epsEstimateCurrentYear, epsEstimateNextYear, epsEstimateNextQuarter, dayLow,"
+	String INSERT_HISTORICAL = "INSERT INTO historicalrecord(symbol, tradeDate, openingPrice, closingPrice, dayHigh, dayLow, volume, adjustedClose) values(?,?,?,?,?,?,?,?)";
+	String INSERT_RECENT = "INSERT INTO recentstockinfo (ask, bid, dividendPerShare,dividendYield, earningsPerShare, epsEstimateCurrentYear, epsEstimateNextYear, epsEstimateNextQuarter, dayLow,"
 			+ "dayHigh, yearLow, yearHigh, marketCap,volume, lastTradePrice, changeFromYearLowPercent, changeFromYearHighPercent, exchange, symbol,dateCreated ) "
 			+ "values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,NOW())";
-	String UPDATE_COMPANY = "UPDATE COMPANY SET EXCHANGE = ? WHERE COMPANYSYMBOL = ? AND COMPANYNAME = ?";
+	String UPDATE_COMPANY = "UPDATE company SET EXCHANGE = ? WHERE COMPANYSYMBOL = ? AND COMPANYNAME = ?";
 	String SELECT_COMPANY_ALL = "SELECT companyName, companySymbol, exchange FROM company where exchange is null";
 	String SELECT_COMPANY_EXCHANGE = "SELECT distinct companyName, companySymbol, exchange FROM company where exchange = ':exchange'";
 	String INSERT_ORDERS = "INSERT INTO ORDERS(orderDate, symbol, description, orderAction, quantity, price, amount, currency) VALUES(?,?,?,?,?,?,?,?)";
