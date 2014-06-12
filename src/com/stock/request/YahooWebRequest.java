@@ -106,7 +106,7 @@ public class YahooWebRequest {
 		try {
 			rd = new BufferedReader(new InputStreamReader(response.getEntity()
 					.getContent()));
-		} catch (IllegalStateException | IOException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
@@ -144,7 +144,7 @@ public class YahooWebRequest {
 			rd = new BufferedReader(new InputStreamReader(response.getEntity()
 					.getContent()));
 
-		} catch (IllegalStateException | IOException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
