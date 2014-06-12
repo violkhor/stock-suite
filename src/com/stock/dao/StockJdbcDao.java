@@ -37,7 +37,7 @@ public class StockJdbcDao implements StockDao {
 	// "dayHigh, yearLow, yearHigh, marketCap,volume, lastTradePrice, changeFromYearLowPercent, changeFromYearHighPercent, exchange, symbol,dateCreated "
 	// + "from recentStockInfo";
 
-	String SELECT_STOCK_INFO_ALL = "SELECT symbol, ask, bid, changeFromYearLowPercent from recentStockInfo where exchange = 'Toronto'";
+	String SELECT_STOCK_INFO_ALL = "SELECT symbol, ask, bid, changeFromYearLowPercent from recentstockinfo where exchange = 'Toronto'";
 	private JdbcTemplate jdbcTemplate;
 
 	@Autowired
