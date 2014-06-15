@@ -18,6 +18,7 @@
 		<param-value>
 		    /WEB-INF/appConfig.xml
 		    /WEB-INF/stock-security.xml
+		    /WEB-INF/stock-data.xml
 		</param-value>
 	</context-param>
 
