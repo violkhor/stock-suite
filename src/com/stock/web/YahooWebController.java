@@ -34,7 +34,7 @@ public class YahooWebController {
         return "yahoo";
     }
 
-    @RequestMapping("/refreshYahoo")
+    @RequestMapping("refreshYahoo")
     public String refreshQuote(Model model) throws IOException {
         updateRecentQuote();
         return "redirect:yahoo";
