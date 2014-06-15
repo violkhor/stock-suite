@@ -16,14 +16,7 @@ http://www.springframework.org/schema/security http://www.springframework.org/sc
 	<authentication-manager>
 		<authentication-provider>
 			<password-encoder hash="md5" />
-			<user-service>
-				<user name="admin" password="5ebe2294ecd0e0f08eab7690d2a6ee69"
-					authorities="ROLE_ADMIN, ROLE_USER" />
-				<user name="user1" password="202cb962ac59075b964b07152d234b70"
-					authorities="ROLE_USER" />
-
-			</user-service>
-
+			<jdbc-user-service data-source-ref="dataSource" />
 		</authentication-provider>
 	</authentication-manager>
 
