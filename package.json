@@ -1,0 +1,29 @@
+{
+  "name": "bitstarter",
+  "version": "0.1.0",
+  "description": "Bitstarter project",
+  "main": "web.js",
+  "scripts": {
+    "start": "node ./web.js"
+  },
+  "dependencies": {
+    "express": "^4.0.0"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/violkhor/bitstarter"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "author": "Siang Khor",
+  "contributors": [
+    "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com)"
+  ],
+  "license": "MIT"
+}
