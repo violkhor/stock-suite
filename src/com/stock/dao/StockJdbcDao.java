@@ -25,7 +25,7 @@ public class StockJdbcDao implements StockDao {
     String INSERT_HISTORICAL = "INSERT INTO historicalrecord(symbol, tradeDate, openingPrice, closingPrice, dayHigh, dayLow, volume, adjustedClose) values(?,?,?,?,?,?,?,?)";
     String INSERT_RECENT = "INSERT INTO recentstockinfo (ask, bid, dividendPerShare,dividendYield, earningsPerShare, epsEstimateCurrentYear, epsEstimateNextYear, epsEstimateNextQuarter, dayLow,"
             + "dayHigh, yearLow, yearHigh, marketCap,volume, lastTradePrice, changeFromYearLowPercent, changeFromYearHighPercent, exchange, symbol,dateCreated ) "
-            + "values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,NOW())";
+            + "values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,convert_tz(current_timestamp, 'GMT','US/Eastern'))";
     String UPDATE_COMPANY = "UPDATE company SET EXCHANGE = ? WHERE COMPANYSYMBOL = ? AND COMPANYNAME = ?";
     String SELECT_COMPANY_ALL = "SELECT companyName, companySymbol, exchange FROM company where exchange is null";
     String SELECT_COMPANY_EXCHANGE = "SELECT distinct companyName, companySymbol, exchange FROM company where exchange = ':exchange'";

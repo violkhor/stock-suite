@@ -36,33 +36,6 @@ public class YahooWebController {
         return "yahoo";
     }
 
-    public void updateRecentQuote() {
-        // LOGIC
-        // 1. Get the list of companies that are trading in various exchanges
-        // 2. Insert into the recent quote table
-        // 3. Retrieve companies that are trading at minimum
-        // 4. Display on screen
-        List<CompanyModel> tsxCompanies = manager.findCompanyByExchange("Toronto");
-        List<StockInfoModel> stockModel = new ArrayList<StockInfoModel>();
-        int i = 0;
-        for (CompanyModel cm : tsxCompanies) {
-            if (cm.getSymbol().equals("N/A")) continue;
-            StockInfoModel stockInfo;
-            try {
-                stockInfo = yahooRequest.getRecentQuote(cm.getSymbol());
-                stockModel.add(stockInfo);
-                if (i++ % 49 == 48) {
-                    manager.insertRecentStockInfo(stockModel);
-                    stockModel.clear();
-                }
-            }
-            catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-        }
-    }
-
     public List<StockInfoModel> populateYearlyLowCompany() throws IOException {
         List<StockInfoModel> model = manager.getAllRecentStockInfo();
         List<StockInfoModel> newModel = new ArrayList<StockInfoModel>();

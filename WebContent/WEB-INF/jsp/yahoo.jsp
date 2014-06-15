@@ -15,7 +15,13 @@
 
 <body>
 	<h2>Welcome to the Yahoo Request Page</h2>
-	<p>Last updated at ${lastUpdateTime}</p>
+	<div>
+		<c:url value="/refreshQuote" var="url" />
+		<a href="<c:out value='${url}'/>">Refresh Quote</a>
+		<p>
+			Last updated: <b>${lastUpdateTime}</b>
+		</p>
+	</div>
 	<div align="center">
 		<table class="inlineTable">
 			<tr>
