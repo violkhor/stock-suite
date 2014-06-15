@@ -51,4 +51,9 @@ public class StockManagerImpl implements StockManager {
     public Date getLastUpdateTime() {
         return stockDao.getLastUpdateTime();
     }
+
+    @Override
+    public void truncateRecentStock() {
+        stockDao.truncateRecentStock();
+    }
 }

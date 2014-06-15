@@ -23,4 +23,6 @@ public interface StockManager {
     public List<StockInfoModel> getAllRecentStockInfo();
 
     public Date getLastUpdateTime();
+
+    public void truncateRecentStock();
 }

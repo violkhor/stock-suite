@@ -31,6 +31,7 @@ public class StockJdbcDao implements StockDao {
     String SELECT_COMPANY_EXCHANGE = "SELECT distinct companyName, companySymbol, exchange FROM company where exchange = ':exchange'";
     String INSERT_ORDERS = "INSERT INTO ORDERS(orderDate, symbol, description, orderAction, quantity, price, amount, currency) VALUES(?,?,?,?,?,?,?,?)";
     String SELECT_LAST_UPDATE_TIME = "select max(dateCreated) from recentstockinfo";
+    String TRUNCATE_RECENT_QUOTE = "truncate table recentstockinfo";
     // String SELECT_STOCK_INFO_ALL =
     // "SELECT ask, bid, dividendPerShare,dividendYield, earningsPerShare, epsEstimateCurrentYear, epsEstimateNextYear, epsEstimateNextQuarter, dayLow,"
     // +
@@ -201,5 +202,10 @@ public class StockJdbcDao implements StockDao {
     @Override
     public Date getLastUpdateTime() {
         return jdbcTemplate.queryForObject(SELECT_LAST_UPDATE_TIME, Date.class);
+    }
+
+    @Override
+    public void truncateRecentStock() {
+        jdbcTemplate.update(TRUNCATE_RECENT_QUOTE);
     }
 }

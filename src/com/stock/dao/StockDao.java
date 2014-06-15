@@ -29,4 +29,6 @@ public interface StockDao {
     public void insertOrderDetails(List<Orders> order);
 
     public Date getLastUpdateTime();
+
+    public void truncateRecentStock();
 }
