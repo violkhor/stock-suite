@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.stock.algo.StockAlgoService;
@@ -19,7 +18,6 @@ import com.stock.request.YahooWebRequest;
 import com.stock.service.StockManager;
 
 @Controller
-@RequestMapping("yahoo")
 public class YahooWebController {
     @Autowired
     private YahooWebRequest yahooRequest;
@@ -28,7 +26,7 @@ public class YahooWebController {
     @Autowired
     private StockAlgoService algo;
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping("yahoo")
     public String initPage(Model model) throws IOException {
         model.addAttribute("message", "Welcome to the Yahoo Page");
         model.addAttribute("lastUpdateTime", manager.getLastUpdateTime());
@@ -36,7 +34,7 @@ public class YahooWebController {
         return "yahoo";
     }
 
-    @RequestMapping("/refresh")
+    @RequestMapping("/refreshYahoo")
     public String refreshQuote(Model model) throws IOException {
         updateRecentQuote();
         return "redirect:yahoo";

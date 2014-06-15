@@ -16,8 +16,8 @@
 <body>
 	<h2>Welcome to the Yahoo Request Page</h2>
 	<div>
-		<c:url value="refresh" var="url" />
-		<a href="<c:out value='${url}'/>">Refresh Quote</a>
+		<c:url value="refreshYahoo" var="url" />
+		<a href="<c:out value='${url}'/>">Refresh</a>
 		<p>
 			Last updated: <b>${lastUpdateTime}</b>
 		</p>
