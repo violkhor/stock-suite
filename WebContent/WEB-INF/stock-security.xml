@@ -7,7 +7,7 @@ http://www.springframework.org/schema/security http://www.springframework.org/sc
 
 	<!-- <http auto-config="true"> -->
 	<http>
-		<intercept-url pattern="/stock*" access="ROLE_ADMIN" />
+		<intercept-url pattern="/*" access="ROLE_ADMIN" />
 		<form-login login-page="/login.jsp" default-target-url="/messageList"
 			authentication-failure-url="/login.jsp?error=true" />
 		<logout logout-success-url="/login.jsp" />
