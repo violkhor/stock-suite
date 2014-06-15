@@ -15,6 +15,7 @@
 
 <body>
 	<h2>Welcome to the Yahoo Request Page</h2>
+	<p>Last updated at ${lastUpdateTime}</p>
 	<div align="center">
 		<table class="inlineTable">
 			<tr>

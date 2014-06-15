@@ -1,5 +1,6 @@
 package com.stock.service;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,40 +14,41 @@ import com.stock.model.StockInfoModel;
 
 @Service("stockManager")
 public class StockManagerImpl implements StockManager {
-	@Autowired
-	@Qualifier("stockDao")
-	private StockDao stockDao;
+    @Autowired
+    @Qualifier("stockDao")
+    private StockDao stockDao;
 
-	public void insertCompanies(List<CompanyModel> cm) {
-		stockDao.insert(cm);
-	}
+    public void insertCompanies(List<CompanyModel> cm) {
+        stockDao.insert(cm);
+    }
 
-	public void insertHistoricalRecords(String symbol, List<HistoricalRecord> hr) {
+    public void insertHistoricalRecords(String symbol, List<HistoricalRecord> hr) {
+        stockDao.insertHistoricalRecord(symbol, hr);
+    }
 
-		stockDao.insertHistoricalRecord(symbol, hr);
-	}
+    public List<CompanyModel> findAllCompanies() {
+        return stockDao.findAllCompanies();
+    }
 
-	public List<CompanyModel> findAllCompanies() {
+    public void updateExchange(List<CompanyModel> cm) {
+        stockDao.updateCompany(cm);
+    }
 
-		return stockDao.findAllCompanies();
+    public List<CompanyModel> findCompanyByExchange(String exchange) {
+        return stockDao.findCompanyByExchange(exchange);
+    }
 
-	}
+    public void insertRecentStockInfo(List<StockInfoModel> stockModel) {
+        stockDao.insertRecentStockInfo(stockModel);
+    }
 
-	public void updateExchange(List<CompanyModel> cm) {
-		stockDao.updateCompany(cm);
-	}
+    @Override
+    public List<StockInfoModel> getAllRecentStockInfo() {
+        return stockDao.getAllRecentStockInfo();
+    }
 
-	public List<CompanyModel> findCompanyByExchange(String exchange) {
-		return stockDao.findCompanyByExchange(exchange);
-
-	}
-
-	public void insertRecentStockInfo(List<StockInfoModel> stockModel) {
-		stockDao.insertRecentStockInfo(stockModel);
-	}
-
-	@Override
-	public List<StockInfoModel> getAllRecentStockInfo() {
-		return stockDao.getAllRecentStockInfo();
-	}
+    @Override
+    public Date getLastUpdateTime() {
+        return stockDao.getLastUpdateTime();
+    }
 }
